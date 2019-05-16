@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href="../www/css/fontawesome/css/all.css" rel="stylesheet">
+    <!--load all styles -->
+    <title>PLAYR</title>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <section class="page" id="homePage">
+
+            <header>
+                <h1 id="title">PLAYR</h1>
+                <i data-target="detailsPage" class="nav fas fa-share-square fa-2x" id="navigator"></i>
+            </header>
+
+            <ul id="tracklist">
+            </ul>
+
+        </section>
+
+        <section class="page" id="detailsPage">
+
+            <h2 data-target="homePage" id="back-arrow" class="nav"> <i class="fas fa-arrow-left fa-2x"></i></h2>
+
+            <div id="detailsDiv">
+            </div>
+
+        </section>
+
+        <div id="volume">
+            <i class="vol fas fa-volume-up fa-2x" id="up-btn"></i>
+            <i class="vol fas fa-volume-down fa-2x" id="down-btn"></i>
+            <i class="vol fas fa-volume-mute fa-2x" id="mute-btn"></i>
+        </div>
+
+        <div id="controls">
+
+            <i class="control fas fa-backward fa-3x" id="rew-btn"></i>
+            <i class="control fas fa-play-circle fa-3x" id="play-btn"></i>
+            <i class="control fas fa-pause-circle fa-3x" id="pause-btn"></i>
+            <i class="control fas fa-forward fa-3x" id="ff-btn"></i>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

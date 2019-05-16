@@ -1,0 +1,127 @@
+
+html {
+  background-color: #1d1e22;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+}
+
+.page {
+  display: none;
+  /*
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  */
+}
+
+.active {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.control {
+  color: #1d1e22;
+  padding: 2px;
+  margin: 2px;
+}
+
+#controls {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  width:100%;
+  bottom: 0;
+  opacity: 0.8;
+}
+
+.vol{
+  color: #1d1e22;
+}
+#volume{
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 5px 20px 5px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top:25rem;
+  right: 0;
+  margin:2px;
+  padding:2px;
+  opacity: 0.6;
+
+}
+
+#back-arrow {
+  display: flex;
+  justify-content: left;
+  color: white;
+  padding-left:6px;
+  margin-left: 6px;
+}
+
+.trackTitle {
+  color: white;
+}
+
+.artistName {
+  color: white;
+}
+
+#play-btn {
+  display: block;
+}
+
+#pause-btn {
+  display: none;
+}
+
+header{
+color:white;
+}
+#navigator{
+  position: fixed;
+  top:0;
+  right:0;
+  padding:1rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "albumCover trackTitle"
+    "albumCover artistName";
+  justify-items: center;
+
+}
+
+.albumCover {
+  grid-area: albumCover;
+  padding-top: 20px;
+
+}
+
+.trackTitle {
+  grid-area: trackTitle;
+
+
+}
+
+.artistName {
+  grid-area: artistName;
+
+}
